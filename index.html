@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8fe2c776c1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="themify-icons.css">
+    <title>PHAN HOÀNG HUY KHẢI</title>
+</head>
+<body>
+    <header id="header">
+    </header>
+
+    <div id="body">
+        <h1 class="greeting prevent-select">
+            Have A Good Day
+        </h1>
+        <!-- GOOGLE SEARCHBOX -->
+        <div class="searchbox">
+            <div class="searchbox--logo">
+                <i class="ti-search"></i>
+            </div>
+            <input class="searchbox__input" type="text" placeholder="Chủ tịch cần tìm gì...?" value="">
+        </div>
+        <!-- USING WEBSITES LIST -->
+        <ul class="using__logo prevent-select">
+            <li>
+                <a href="https://www.facebook.com/" class="using__logo--items" target="_blank" target="_blank">
+                    <div class="logo__item--img logo__img--fb"></div>
+                    <h1 class="logo__item--title">FaceBook</h1>
+                </a>
+            </li>
+            <li>
+                <a href="https://chat.zalo.me/" class="using__logo--items" target="_blank">
+                    <div class="logo__item--img logo__img--zl"></div>
+                    <h1 class="logo__item--title">ZaLo</h1>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/" class="using__logo--items" target="_blank">
+                    <div class="logo__item--img logo__img--yt"></div>
+                    <h1 class="logo__item--title">Youtube</h1>
+                </a>
+            </li>
+            <li>
+                <a href="https://mail.google.com/" class="using__logo--items" target="_blank">
+                    <div class="logo__item--img logo__img--mail"></div>
+                    <h1 class="logo__item--title">Gmail</h1>
+                </a>
+            </li>
+            <li>
+                <a href="https://qldt.agvc.edu.vn/portal/thoi-khoa-bieu" class="using__logo--items" target="_blank">
+                    <div class="logo__item--img logo__img--agvc"></div>
+                    <h1 class="logo__item--title">Schedule</h1>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <footer id="footer">
+
+    </footer>
+
+    <script>
+        let query = document.querySelector('.searchbox__input');
+        let searchBtn = document.querySelector('.searchbox--logo');
+
+        searchBtn.onclick = function(){
+            let url = 'https://www.google.com/search?q=' + query.value;
+            window.open(url, '_blank');
+        }
+
+        query.addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                document.querySelector('.searchbox--logo').click();
+            }
+        });
+    </script>
+</body>
+</html>
